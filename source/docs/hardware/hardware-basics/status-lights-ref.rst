@@ -20,7 +20,9 @@ Robot Signal Light (RSL)
 | Off      | Robot Off, roboRIO not powered or RSL not wired properly |
 +----------+----------------------------------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 roboRIO
 -------
@@ -67,7 +69,9 @@ roboRIO
 | **RSL**    | `See above <#robot-signal-light-rsl>`_                                                             |
 +------------+----------------------------------------------------------------------------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 OpenMesh Radio
 --------------
@@ -95,7 +99,9 @@ OpenMesh Radio
 |          | Green         | Bridge mode, Linked          |
 +----------+---------------+------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Power Distribution Panel
 ------------------------
@@ -134,7 +140,9 @@ PDP Special States
 | No LED       | No Power/ Incorrect Polarity |
 +--------------+------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Power Distribution Hub
 ----------------------
@@ -183,7 +191,9 @@ Channel LEDs
 | Red Blinking | Sticky fault on the channel. Check for tripped circuit breaker / fuse.                                   |
 +--------------+----------------------------------------------------------------------------------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Voltage Regulator Module
 ------------------------
@@ -194,7 +204,9 @@ Voltage Regulator Module
 
 The status LEDs on the VRM indicate the state of the two power supplies. If the supply is functioning properly the LED should be lit bright green. If the LED is not lit or is dim, the output may be shorted or drawing too much current.
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Pneumatics Control Module (PCM)
 -------------------------------
@@ -245,7 +257,9 @@ PCM Solenoid Channel LEDs
 
 These LEDs are lit red if the Solenoid channel is enabled and not lit if it is disabled.
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Pneumatic Hub
 -------------
@@ -303,7 +317,9 @@ Solenoid LEDs
 | Black Solid | Solenoid Off |
 +-------------+--------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Talon SRX & Victor SPX & Talon FX Motor Controllers
 ---------------------------------------------------
@@ -367,7 +383,9 @@ B/C CAL Blink Codes
 | Off                  | Coast Mode      |
 +----------------------+-----------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 SPARK-MAX Motor Controller
 --------------------------
@@ -375,7 +393,9 @@ SPARK-MAX Motor Controller
 .. image:: images/status-lights/sparkMAXLight.png
   :alt: Table listing the SPARKMAX blink codes.
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 REV Robotics SPARK
 ------------------
@@ -383,7 +403,9 @@ REV Robotics SPARK
 .. image:: images/status-lights/sparkLight.png
   :alt: Table of the SPARK blink codes.
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Victor-SP Motor Controller
 --------------------------
@@ -413,7 +435,9 @@ Status
 |           |          | calibration, and red several times indicates unsuccessful calibration. |
 +-----------+----------+------------------------------------------------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Talon Motor Controller
 ----------------------
@@ -441,7 +465,9 @@ Talon Motor Controller
 |           |          | calibration, and red several times indicates unsuccessful calibration. |
 +-----------+----------+------------------------------------------------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Victor888 Motor Controller
 --------------------------
@@ -464,7 +490,9 @@ Victor888 Motor Controller
 | Red/Green | Blinking | Calibration mode         |
 +-----------+----------+--------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Jaguar Motor Controller
 -----------------------
@@ -515,7 +543,9 @@ Jaguar Motor Controller
 |                              | awaiting valid ID assignment                   |
 +------------------------------+------------------------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Digilent DMC-60
 ---------------
@@ -582,7 +612,9 @@ Break/Coast Mode
 
 When the center LED is off the device is operating in coast mode. When the center LED is illuminated the device is operating in brake mode. The Brake/Coast mode can be toggled by pressing down on the center of the triangle and then releasing the button.
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Venom Motor Controller
 ----------------------
@@ -590,7 +622,9 @@ Venom Motor Controller
 .. image:: images/status-lights/venom.png
   :alt: The LED blink codes for the Venom.
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Mindsensors SD540B (PWM)
 ------------------------
@@ -613,7 +647,9 @@ Mindsensors SD540B (PWM)
 |                | Green | Valid PWM signal is detected    |
 +----------------+-------+---------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Mindsensors SD540C (CAN Bus)
 ----------------------------
@@ -636,7 +672,9 @@ Mindsensors SD540C (CAN Bus)
 |                | Off              | Connected to the roboRIO and the driver station is open |
 +----------------+------------------+---------------------------------------------------------+
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 REV Robotics Servo Power Module
 -------------------------------
@@ -664,7 +702,9 @@ Each channel has a corresponding status LED that will indicate the sensed state 
 
 - 6V Power LED off, dim or flickering with power applied = Over-current shutdown
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Spike relay configured as a motor, light, or solenoid switch
 ------------------------------------------------------------
@@ -689,7 +729,9 @@ Spike relay configured as a motor, light, or solenoid switch
 
 .. note:: 'Brake Condition' refers to the dynamic stopping of the motor due to the shorting of the motor inputs. This condition is not optional when going to an off state.
 
-<div style="page-break-after: always;"></div>
+.. raw:: pdf
+
+   PageBreak
 
 Spike relay configured as for one or two solenoids
 --------------------------------------------------
