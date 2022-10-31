@@ -63,7 +63,7 @@ Visualizing your trajectory is a great debugging step for verifying that your tr
 
    .. group-tab:: C++
 
-      .. rli:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/v2022.4.1/wpilibcExamples/src/main/cpp/examples/RamseteController/cpp/Robot.cpp
+      .. rli:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/v2023.1.1-beta-1/wpilibcExamples/src/main/cpp/examples/RamseteController/cpp/Robot.cpp
          :language: cpp
          :lines: 18-30
          :linenos:
@@ -107,7 +107,7 @@ One usage of customizing the pose style is converting the previously shown ``tra
 .. image:: images/changing-style-line.png
    :alt: Selecting the "style" dropdown and then selecting "line".
 
-Now, uncheck the :guilabel:`Arrows` checkbox. This will cause cause our trajectory to look like a nice and fluid line!
+Now, uncheck the :guilabel:`Arrows` checkbox. This will cause our trajectory to look like a nice and fluid line!
 
 .. image:: images/unchecked-arrow-trajectory.png
    :alt: Unchecked arrows checkbox to showcase fluid line.

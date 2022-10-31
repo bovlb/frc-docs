@@ -14,6 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+from pathlib import Path
 import sys
 import os
 
@@ -23,7 +24,7 @@ sys.path.append(os.path.abspath("./frc-docs/source"))
 # -- Project information -----------------------------------------------------
 
 project = "FIRST Robotics Competition"
-copyright = "2022, FIRST and other WPILib Contributors"
+copyright = "2022, FIRST and other WPILib Contributors. This work is licensed under a Creative Commons Attribution 4.0 International License"
 author = "WPILib"
 version = "2022"
 
@@ -53,12 +54,17 @@ extensions = [
     "notfound.extension",
     "versionwarning.extension",
     "sphinx_panels",
+    "sphinx.ext.viewcode",
+    "sphinx_tabs.tabs",
+    "sphinx-prompt",
+    "sphinx_toolbox.collapse",
 ]
 
 local_extensions = [
     "_extensions.post_process",
     "_extensions.rtd_patch",
     "_extensions.localization",
+    "_extensions.controls_js_sim",
 ]
 
 extensions += local_extensions
@@ -108,6 +114,9 @@ ogp_image = (
     "https://raw.githubusercontent.com/wpilibsuite/branding/main/png/wpilib-128.png"
 )
 
+# Configure photofinish ci mode
+photofinish_ci_only = True
+
 # Enables ChiefDelphi support
 ogp_custom_meta_tags = [
     '<meta property="og:ignore_canonical" content="true" />',
@@ -138,6 +147,8 @@ linkcheck_ignore = [
     r".*ti.com/lit/an/spma033a/spma033a.pdf.*",
     r".*wpilibpi.local.*",
     r".*java.com/en/download/help/locale.xml.*",
+    r".*playingwithfusion.com/contactus.php.*",
+    r".*github.com/wpilibsuite/BetaTest.*",
 ]
 
 # Sets linkcheck timeout in seconds
@@ -157,7 +168,7 @@ templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["docs/yearly-overview/2020-Game-Data.rst", "docs/beta/*"]
+exclude_patterns = ["docs/yearly-overview/2020-Game-Data.rst"]
 
 # Specify the master doc file, AKA our homepage
 master_doc = "index"
@@ -243,16 +254,16 @@ latex_use_xindy = False
 
 latex_elements = {
     "fontpkg": r"""
-	\setmainfont{DejaVu Serif}
-	\setsansfont{DejaVu Sans}
-	\setmonofont{DejaVu Sans Mono}""",
+    \setmainfont{DejaVu Serif}
+    \setsansfont{DejaVu Sans}
+    \setmonofont{DejaVu Sans Mono}""",
     "preamble": r"""
-	\usepackage[titles]{tocloft}
-	\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
-	\setlength{\cftchapnumwidth}{0.75cm}
-	\setlength{\cftsecindent}{\cftchapnumwidth}
-	\setlength{\cftsecnumwidth}{1.25cm}
-	""",
+    \usepackage[titles]{tocloft}
+    \cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
+    \setlength{\cftchapnumwidth}{0.75cm}
+    \setlength{\cftsecindent}{\cftchapnumwidth}
+    \setlength{\cftsecnumwidth}{1.25cm}
+    """,
     "fncychap": r"\usepackage[Bjornstrup]{fncychap}",
     "printindex": r"\footnotesize\raggedright\printindex",
 }
@@ -267,3 +278,6 @@ sphinx_tabs_valid_builders = ["epub", "linkcheck"]
 gettext_compact = False
 locale_dirs = ["locale/"]
 rtl_locale = ["he"]
+
+github_username = ""
+github_repository = ""

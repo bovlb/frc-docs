@@ -11,7 +11,7 @@ Trapezoidal Motion Profiles in WPILib
 
 While feedforward and feedback control offer convenient ways to achieve a given setpoint, we are often still faced with the problem of generating setpoints for our mechanisms.  While the naive approach of immediately commanding a mechanism to its desired state may work, it is often suboptimal.  To improve the handling of our mechanisms, we often wish to command mechanisms to a *sequence* of setpoints that smoothly interpolate between its current state, and its desired goal state.
 
-To help users do this, WPILib provides a ``TrapezoidProfile`` class (`Java <https://first.wpi.edu/wpilib/allwpilib/docs/release/java/edu/wpi/first/math/trajectory/TrapezoidProfile.html>`__, `C++ <https://first.wpi.edu/wpilib/allwpilib/docs/release/cpp/classfrc_1_1_trapezoid_profile.html>`__).
+To help users do this, WPILib provides a ``TrapezoidProfile`` class (`Java <https://first.wpi.edu/wpilib/allwpilib/docs/development/java/edu/wpi/first/math/trajectory/TrapezoidProfile.html>`__, `C++ <https://first.wpi.edu/wpilib/allwpilib/docs/development/cpp/classfrc_1_1_trapezoid_profile.html>`__).
 
 Creating a TrapezoidProfile
 ---------------------------
@@ -23,7 +23,7 @@ Constraints
 
 .. note:: The various :ref:`feedforward helper classes <docs/software/advanced-controls/controllers/feedforward:Feedforward Control in WPILib>` provide methods for calculating the maximum simultaneously-achievable velocity and acceleration of a mechanism.  These can be very useful for calculating appropriate motion constraints for your ``TrapezoidProfile``.
 
-In order to create a trapezoidal motion profile, we must first impose some constraints on the desired motion.  Namely, we must specify a maximum velocity and acceleration that the mechanism will be expected to achieve during the motion.  To do this, we create an instance of the ``TrapezoidProfile.Constraints`` class (`Java <https://first.wpi.edu/wpilib/allwpilib/docs/release/java/edu/wpi/first/math/trajectory/TrapezoidProfile.Constraints.html>`__, `C++ <https://first.wpi.edu/wpilib/allwpilib/docs/release/cpp/classfrc_1_1_trapezoid_profile_1_1_constraints.html>`__):
+In order to create a trapezoidal motion profile, we must first impose some constraints on the desired motion.  Namely, we must specify a maximum velocity and acceleration that the mechanism will be expected to achieve during the motion.  To do this, we create an instance of the ``TrapezoidProfile.Constraints`` class (`Java <https://first.wpi.edu/wpilib/allwpilib/docs/development/java/edu/wpi/first/math/trajectory/TrapezoidProfile.Constraints.html>`__, `C++ <https://first.wpi.edu/wpilib/allwpilib/docs/development/cpp/classfrc_1_1_trapezoid_profile_1_1_constraints.html>`__):
 
 .. tabs::
 
@@ -44,7 +44,7 @@ In order to create a trapezoidal motion profile, we must first impose some const
 Start and End States
 ^^^^^^^^^^^^^^^^^^^^
 
-Next, we must specify the desired starting and ending states for our mechanisms using the ``TrapezoidProfile.State`` class (`Java <https://first.wpi.edu/wpilib/allwpilib/docs/release/java/edu/wpi/first/math/trajectory/TrapezoidProfile.State.html>`__, `C++ <https://first.wpi.edu/wpilib/allwpilib/docs/release/cpp/classfrc_1_1_trapezoid_profile_1_1_state.html>`__).  Each state has a position and a velocity:
+Next, we must specify the desired starting and ending states for our mechanisms using the ``TrapezoidProfile.State`` class (`Java <https://first.wpi.edu/wpilib/allwpilib/docs/development/java/edu/wpi/first/math/trajectory/TrapezoidProfile.State.html>`__, `C++ <https://first.wpi.edu/wpilib/allwpilib/docs/development/cpp/classfrc_1_1_trapezoid_profile_1_1_state.html>`__).  Each state has a position and a velocity:
 
 .. tabs::
 
@@ -132,7 +132,7 @@ The ``calculate`` method returns a ``TrapezoidProfile.State`` class (the same on
 Complete Usage Example
 ----------------------
 
-.. note:: In this example, the profile is re-computed every timestep.  This is a somewhat different usage technique than is detailed above, but works according to the same principles - the profile is sampled at at a time corresponding to the loop period to get the setpoint for the next loop iteration.
+.. note:: In this example, the profile is re-computed every timestep.  This is a somewhat different usage technique than is detailed above, but works according to the same principles - the profile is sampled at a time corresponding to the loop period to get the setpoint for the next loop iteration.
 
 A more complete example of ``TrapezoidProfile`` usage is provided in the ElevatorTrapezoidProfile example project (`Java <https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/elevatortrapezoidprofile>`__, `C++ <https://github.com/wpilibsuite/allwpilib/tree/main/wpilibcExamples/src/main/cpp/examples/ElevatorTrapezoidProfile/cpp>`__):
 
@@ -140,7 +140,7 @@ A more complete example of ``TrapezoidProfile`` usage is provided in the Elevato
 
   .. group-tab:: Java
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/v2022.4.1/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/elevatortrapezoidprofile/Robot.java
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/v2023.1.1-beta-1/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/elevatortrapezoidprofile/Robot.java
       :language: java
       :lines: 5-
       :linenos:
@@ -148,7 +148,7 @@ A more complete example of ``TrapezoidProfile`` usage is provided in the Elevato
 
   .. group-tab:: C++
 
-    .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/v2022.4.1/wpilibcExamples/src/main/cpp/examples/ElevatorTrapezoidProfile/cpp/Robot.cpp
+    .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/v2023.1.1-beta-1/wpilibcExamples/src/main/cpp/examples/ElevatorTrapezoidProfile/cpp/Robot.cpp
       :language: c++
       :lines: 5-
       :linenos:
